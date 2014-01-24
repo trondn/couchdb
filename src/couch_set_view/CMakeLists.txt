@@ -1,0 +1,15 @@
+FILE(GLOB SRC src/*.erl)
+INCLUDE_ERDIR(${CMAKE_CURRENT_SOURCE_DIR}/../couchdb)
+INCLUDE_ERDIR(${CMAKE_CURRENT_SOURCE_DIR}/..)
+INCLUDE_ERDIR(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+ERL_BUILD("couch_set_view" ${SRC})
+SET(COUCH_SET_VIEW_PREFIX ${CMAKE_ERL_LIB_INSTALL_PREFIX}/couch_set_view-1.0.0)
+
+SET(COUCH_SET_VIEW_INCLUDE_FILES include/couch_set_view.hrl
+                                 src/couch_set_view_updater.hrl)
+INSTALL(FILES ${COUCH_SET_VIEW_INCLUDE_FILES}
+    DESTINATION ${COUCH_SET_VIEW_PREFIX}/include)
+
+INSTALL(FILES ${outfiles}
+    DESTINATION ${COUCH_SET_VIEW_PREFIX}/ebin)

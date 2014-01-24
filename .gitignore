@@ -127,3 +127,14 @@ couchdb.stdout
 
 cover/*
 INSTALL
+
+# CMake stuff
+CMakeFiles
+CTestTestfile.cmake
+cmake_install.cmake
+/src/couch_view_parser/libcouch_view_parser_nif.so
+/src/couchdb/priv/libcouch_ejson_compare.so
+/src/couchdb/priv/libcouch_icu_driver.so
+/src/ejson/libejson.so
+/src/mapreduce/libmapreduce_nif.so
+/src/snappy/libsnappy_nif.so

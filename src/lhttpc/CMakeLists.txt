@@ -1,0 +1,5 @@
+FILE(GLOB LHTTP_SRC *.erl)
+ERL_BUILD("lhttpc" ${LHTTP_SRC})
+INSTALL(FILES ${outfiles}
+    DESTINATION ${CMAKE_ERL_LIB_INSTALL_PREFIX}/lhttpc-1.3/ebin)
+

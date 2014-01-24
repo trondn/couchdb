@@ -1,0 +1,5 @@
+FILE(GLOB MOCHIWEB_SRC *.erl)
+ERL_BUILD("mochiweb" ${MOCHIWEB_SRC})
+INSTALL(FILES ${outfiles}
+    DESTINATION ${CMAKE_ERL_LIB_INSTALL_PREFIX}/mochiweb-1.4.1/ebin)
+

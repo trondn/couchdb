@@ -1,0 +1,5 @@
+FILE(GLOB ETAP_SRC *.erl)
+ERL_BUILD("etap" ${ETAP_SRC})
+INSTALL(FILES ${outfiles}
+    DESTINATION ${CMAKE_ERL_LIB_INSTALL_PREFIX}/etap/ebin)
+
